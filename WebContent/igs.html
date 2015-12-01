@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery门户网站图片展示集</title>   
+<link href="imgshow/css/lanrenzhijia.css" type="text/css" rel="stylesheet" /> 
+<script src="imgshow/js/jquery.min.js"></script>
+<script src="imgshow/js/jquery.jcarousellite.min.js"></script>
+
+
+
+<style>
+.bt2 {background:#f4f4f4; height:33px; line-height:33px;}
+.f12_888888,.f12_888888 a {color: #888888;}
+.left { float: left;}
+.wh25{width:25px;}
+.txtcenter {text-align:center}
+.lh24 {line-height:24px}
+.yahei { font-family: "微软雅黑"}
+.mt5 { margin-top:5px;}
+</style>
+
+
+</head>
+<body>
+		<div id="OriginalPic">
+			<div id="aPrev" class="CursorL"></div>
+			<div id="aNext" class="CursorR"></div>
+			<p class="Hidden">
+				<span class="SliderPicBorder FlRight"><img src="imgshow/images/1.jpg" /></span>
+			</p>
+			<p class="Hidden">
+				<span class="SliderPicBorder FlRight"><img src="imgshow/images/2.jpg" /></span>
+			</p>
+			<p class="Hidden">
+				<span class="SliderPicBorder FlRight"><img src="imgshow/images/3.jpg" /></span>
+			</p>
+			<p class="Hidden">
+				<span class="SliderPicBorder FlRight"><img src="imgshow/images/4.jpg" /></span>
+			</p>
+			<p class="Hidden">
+				<span class="SliderPicBorder FlRight"><img src="imgshow/images/5.jpg" /></span>
+			</p>
+			<p class="Hidden">
+				<span class="SliderPicBorder FlRight"><img src="imgshow/images/6.jpg" /></span>
+			</p>
+			<p class="Hidden">
+				<span class="SliderPicBorder FlRight"><img src="imgshow/images/7.jpg" /></span>
+			</p>
+		</div>
+		
+		<div class="ThumbPicBorder" >
+		<img src="imgshow/images/ArrowL.jpg" id="btnPrev" class="FlLeft" style="cursor:pointer; height: 15px;" />
+		<div class="jCarouselLite FlLeft">
+			<ul id="ThumbPic"> 
+				<li rel='1' style="width: 30px;"><div class="active" style="width:15px;height:15px;background-color: #cccccc;line-height: 15px;text-align: center;">1</div></li>
+				<li rel='2' style="width: 30px;"><div style="width:15px;height:15px;background-color: #cccccc;line-height: 15px;text-align: center;">2</div></li>
+				<li rel='3' style="width: 30px;"><div style="width:15px;height:15px;background-color: #cccccc;line-height: 15px;text-align: center;">3</div></li>
+				<li rel='4' style="width: 30px;"><div style="width:15px;height:15px;background-color: #cccccc;line-height: 15px;text-align: center;">4</div></li>
+				<li rel='5' style="width: 30px;"><div style="width:15px;height:15px;background-color: #cccccc;line-height: 15px;text-align: center;">5</div></li>
+				<li rel='6' style="width: 30px;"><div style="width:15px;height:15px;background-color: #cccccc;line-height: 15px;text-align: center;">6</div></li>
+				<li rel='7' style="width: 30px;"><div style="width:15px;height:15px;background-color: #cccccc;line-height: 15px;text-align: center;">7</div></li>
+			</ul>
+			<div class="Clearer"></div>
+		</div>
+		<img src="imgshow/images/ArrowR.jpg" id="btnNext" class="FlLeft" style="cursor:pointer;height: 15px;" />
+		<div class="Clearer"></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="bt2 f12_888888">
+		<div 
+		class="left wh25 txtcenter lh24 yahei mt5" onclick="cli(this)" onmouseover="change(this)"
+		onmouseout="change1(this)">
+		<a href="javascript:void(0);">1</a>
+		</div>
+		
+		<div 
+		class="left wh25 txtcenter lh24 yahei mt5" onclick="cli(this)" onmouseover="change(this)"
+		onmouseout="change1(this)">
+		<a href="javascript:void(0);">2</a>
+		</div>
+		
+		<div 
+		class="left wh25 txtcenter lh24 yahei mt5" onclick="cli(this)" onmouseover="change(this)"
+		onmouseout="change1(this)">
+		<a href="javascript:void(0);">3</a>
+		</div>
+		
+		<div 
+		class="left wh25 txtcenter lh24 yahei mt5" onclick="cli(this)" onmouseover="change(this)"
+		onmouseout="change1(this)">
+		<a href="javascript:void(0);">4</a>
+		</div>
+		
+		<div 
+		class="left wh25 txtcenter lh24 yahei mt5" onclick="cli(this)" onmouseover="change(this)"
+		onmouseout="change1(this)">
+		<a href="javascript:void(0);">5</a>
+		</div>
+		
+		<div
+		class="left wh25 txtcenter lh24 yahei mt5" onclick="cli(this)" onmouseover="change(this)"
+		onmouseout="change1(this)">
+		<a href="javascript:void(0);">6</a>
+		</div>
+	
+	</div>
+	
+	
+
+
+
+
+
+
+<script type="text/javascript">
+//缩略图滚动事件
+$(".jCarouselLite").jCarouselLite({
+	btnNext: "#btnNext",
+	btnPrev: "#btnPrev",
+	scroll: 1,
+	speed: 240,
+	circular: false,
+	visible: 6
+});
+
+function cli(abc){
+	abc.style.background='url(http://pic.cnr.cn/2012tppd/sjcs/images/d.gif)';
+}
+
+function change(abc)
+{
+abc.style.background='url(http://pic.cnr.cn/2012tppd/sjcs/images/d.gif)';
+}
+function change1(abc)
+{
+abc.style.background='url()';
+}
+
+</script>
+<script src="imgshow/js/lanrenzhijia.js"></script>
+</body>
+</html>
